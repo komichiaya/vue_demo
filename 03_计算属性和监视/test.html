@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 </head>
+
 <body>
-    
+    <div>
+        姓：<input type="text" placeholder="First Name"><br>
+        名：<input type="text" placeholder="Last Name"><br>
+        姓名1（单向）：<input type="text" placeholder="Full Name1"><br>
+        姓名2（单向）：<input type="text" placeholder="Full Name2"><br>
+        姓名3（双向）：<input type="text" placeholder="Full Name3"><br>
+    </div>
+
+    <script src="../js/vue.js"></script>
+    <script>
+        /*
+        Object.defineProperty(obj, prop, descriptor)方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回这个对象。
+                                    obj
+                                    要定义属性的对象。
+                                    prop
+                                    要定义或修改的属性的名称或 Symbol 。
+                                    descriptor
+                                    要定义或修改的属性描述符。
+        get(){} getter -->get 当访问该属性时,会调用此函数.该函数的返回值会被用作属性的值.this是属性所在的对象
+        set(value){} setter-->set 当属性值被修改时,会调用此函数.用来监视属性值的变化.this是属性所在的对象
+        */
+    </script>
 </body>
+
 </html>

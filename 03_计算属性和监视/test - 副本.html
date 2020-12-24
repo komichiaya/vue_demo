@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo">
+        姓：<input type="text" placeholder="First Name" v-model="firstName"><br>
+        名：<input type="text" placeholder="Last Name" v-model="lastName"><br>
+        姓名1（单向）：<input type="text" placeholder="Full Name1" v-model="fullName1"><br>
+        姓名2（单向）：<input type="text" placeholder="Full Name2"><br>
+        姓名3（双向）：<input type="text" placeholder="Full Name3"><br>
+    </div>
+
+    <script src="../js/vue.js"></script>
+    <script>
+        new Vue({
+            el: "#demo",
+            data: {
+                firstName: "A",
+                lastName: "D"
+            },
+            computed: {
+                // 直接当做普通属性调用不加括号
+                // 任何data中数据变化立即重新计算
+                // 计算属性会缓存
+                fullName1() {
+                    return this.firstName + "-" + this.lastName
+                }
+
+            },
+        })
+    </script>
+</body>
+
+</html>
