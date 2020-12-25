@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo">
+        <input type="text" v-model="searchName">
+        <ul>
+            <li v-for="(item, index) in persons" :key="item.id">
+                {{item.id}}---{{item.name}}---{{item.age}}
+
+            </li>
+        </ul>
+        <button>按年龄升序</button>
+        <button>按年龄降序</button>
+        <button>复原</button>
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+        new Vue({
+            el: "#demo",
+            data() {
+                return {
+                    searchName: "",
+                    persons: [{
+                            id: 1,
+                            name: "Tom",
+                            age: 15
+                        }, {
+                            id: 3,
+                            name: "Jerry ",
+                            age: 12
+                        },
+                        {
+                            id: 5,
+                            name: "Jack",
+                            age: 14
+                        }, {
+                            id: 7,
+                            name: 'Bob',
+                            age: 13
+                        },
+                        {
+                            id: 2,
+                            name: 'Mack',
+                            age: 16
+                        },
+
+                    ]
+                }
+            },
+            methods: {},
+        })
+    </script>
+</body>
+
+</html>
