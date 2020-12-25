@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <!-- 
+        1．条件渲染指令v-if v-elsev-show 
+        2．比较v-if与v-show 如果需要频繁切换v-show较好 
+    -->
+    <!--模板中读数据找的都是vm -->
+    <div id="demo">
+        <p v-if="condition">这是第一段文字</p>
+        <p v-else>这是第二段文字</p>
+        <p>------------------------------</p>
+        <p v-show="condition">这是第一段文字</p>
+        <p v-show="!condition">这是第二段文字</p>
+        <button @click="change">切换</button>
+    </div>
     <script src="../js/vue.js"></script>
     <script>
-        
+        new Vue({
+            el: "#demo",
+            data: {
+                condition: true,
+            },
+            methods: {
+                change() {
+                    this.condition = !this.condition
+                }
+            },
+        })
     </script>
 </body>
+
 </html>
